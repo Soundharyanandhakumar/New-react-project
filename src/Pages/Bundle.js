@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import Airpods from '../images/airpods.jpg'
-import SmartPhones from '../images/Phone.jpg'
 import Laptop from '../images/Lap.jpg'
+import SmartPhones from '../images/Phone.jpg'
 import Footwear from '../images/Footwear.jpg'
+import Airpods from '../images/airpods.jpg'
+import Smartwatch from '../images/Smartwatch.jpg'
 import ClothesAndAccessories from '../images/C&A.jpg'
-import './Bundle.css';
+//import bundle './Bundle.css'
 const Createbundle = () => {
     const [bundleForm, setBundleForm] = useState({
         product1: {
             id: "1",
             name: "Airpods",
-            price: 1500,
+            price: 2000,
             image: Airpods
         },
         product2: {
-            id: "1",
+            id: "2",
             name: "Laptop",
             price: 150000,
             image: Laptop
@@ -25,21 +26,39 @@ const Createbundle = () => {
     const [productitems, setproductitems] = useState([
       {
         id: "1",
-        name: "Airpods",
-        price: 1500,
-        image: Airpods
+        name: "Smartwatch",
+        price: 3000,
+        image: Smartwatch
       },
       {
         id: "2",
-        name: "SmartPhones",
-        price: 20000,
-        image: SmartPhones
+        name: "Airpods",
+        price: 2000,
+        image: Airpods
       },
       {
         id: "3",
+        name: "Smartphones",
+        price: 25000,
+        image: SmartPhones
+      },
+      {
+        id: "4",
+        name: "Clothes & Accessories",
+        price: 10000,
+        image: ClothesAndAccessories
+      },
+      {
+        id: "5",
         name: "Footwear",
         price: 500,
         image: Footwear
+      },
+      {
+        id: "6",
+        name: "Laptop",
+        price: 150000,
+        image: Laptop
       }
     ]);
     const handleChange = (e) => {
@@ -88,9 +107,9 @@ const Createbundle = () => {
                 <label>Discount</label>
                 <select name="discount" id="discount" onChange={handleChange}>
                     <option value="10">10%</option>
-                    <option value="20">20%</option>
-                    <option value="30">30%</option>
+                    <option value="25">25%</option>
                     <option value="40">40%</option>
+                    <option value="50">50%</option>
                 </select>
                 <button>Submit</button>
             </form>

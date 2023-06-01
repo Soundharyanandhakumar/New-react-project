@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Laptop from '../images/Lap.jpg'
 import SmartPhones from '../images/Phone.jpg'
 import Footwear from '../images/Footwear.jpg'
+import Airpods from '../images/airpods.jpg'
+import Smartwatch from '../images/Smartwatch.jpg'
 import ClothesAndAccessories from '../images/C&A.jpg'
 import products from './Products.css'
 
@@ -13,18 +15,30 @@ const Data = () => {
   const [productitems, setproductitems] = useState([
     {
       id: "1",
-      name: "Laptop",
-      price: 150000,
-      image: Laptop
+      name: "Smartwatch",
+      price: 3000,
+      image: Smartwatch
     },
     {
       id: "2",
-      name: "SmartPhones",
-      price: 20000,
-      image: SmartPhones
+      name: "Airpods",
+      price: 2000,
+      image: Airpods
     },
     {
       id: "3",
+      name: "Smartphones",
+      price: 25000,
+      image: SmartPhones
+    },
+    {
+      id: "4",
+      name: "Clothes & Accessories",
+      price: 10000,
+      image: ClothesAndAccessories
+    },
+    {
+      id: "5",
       name: "Footwear",
       price: 500,
       image: Footwear
@@ -34,9 +48,9 @@ const Data = () => {
   const AddItem = () => {
     const newProduct = {
       id: `${productitems.length + 1}`,
-      name: "Clothes & Accessories",
-      price: 1000,
-      image: ClothesAndAccessories
+      name: "Laptop",
+      price: 150000,
+      image: Laptop
     };
     setproductitems([...productitems, newProduct]);
   };
