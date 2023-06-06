@@ -1,5 +1,17 @@
-.bundle{
-    position: absolute;
-    display: flex;
-    background-color: aqua;
+.product{
+    align-items: center;
+    margin-left: auto ;
+    margin-right: 38rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: max-content;
+    padding: .5rem;
+    background-color: rgb(226, 235, 53);
+    border: 2px solid rgb(25, 11, 228);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.createbundle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

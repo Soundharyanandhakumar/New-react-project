@@ -5,25 +5,25 @@ import Footwear from '../images/Footwear.jpg'
 import Airpods from '../images/airpods.jpg'
 import Smartwatch from '../images/Smartwatch.jpg'
 import ClothesAndAccessories from '../images/C&A.jpg'
-//import bundle './Bundle.css'
+import './Bundle.css'
 const Createbundle = () => {
     const [bundleForm, setBundleForm] = useState({
         product1: {
-            id: "1",
-            name: "Airpods",
-            price: 2000,
-            image: Airpods
+          id: "1",
+          name: "Smartwatch",
+          price: 3000,
+          image: Smartwatch
         },
         product2: {
-            id: "2",
-            name: "Laptop",
-            price: 150000,
-            image: Laptop
+          id: "2",
+          name: "Airpods",
+          price: 2000,
+          image: Airpods
         },
         discount: "10"
     })
     const [bundledProducts, setBundledProducts] = useState([])
-    const [productitems, setproductitems] = useState([
+    const productitems = [
       {
         id: "1",
         name: "Smartwatch",
@@ -60,7 +60,7 @@ const Createbundle = () => {
         price: 150000,
         image: Laptop
       }
-    ]);
+    ];
     const handleChange = (e) => {
         if (e.target.name === "discount") {
             setBundleForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -118,7 +118,7 @@ const Createbundle = () => {
                     <>
                         <label className='labelproduct1'>Product 1</label>
                         <div className="product" key={product.product1}>
-                            <img src={product.product1.image} width="200px" height="200px" alt="Product Image" />
+                            <img src={product.product1.image} width="200px" height="200px" alt="Product" />
                             <div className="product-details">
                                 <h3 className="product-name">{product.product1.name}</h3>
                                 <p className="product-price"> ${product.product1.price}</p>
@@ -126,7 +126,7 @@ const Createbundle = () => {
                         </div>
                         <label className='labelproduct2' >Product 2</label>
                         <div className="product" key={product.product2}>
-                            <img src={product.product2.image} width="200px" height="200px" alt="Product Image" />
+                            <img src={product.product2.image} width="200px" height="200px" alt="Product" />
                             <div className="product-details">
                                 <h3 className="product-name">{product.product2.name}</h3>
                                 <p className="product-price"> ${product.product2.price}</p>

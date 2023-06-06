@@ -7,8 +7,7 @@ import Footwear from '../images/Footwear.jpg'
 import Airpods from '../images/airpods.jpg'
 import Smartwatch from '../images/Smartwatch.jpg'
 import ClothesAndAccessories from '../images/C&A.jpg'
-import products from './Products.css'
-
+import  './Products.css'
 
 //import './Data.css';
 const Data = () => {
@@ -60,12 +59,15 @@ const Data = () => {
   };
   return (
     <>
+    <button className='add-button' onClick={AddItem}>
+        Add Products
+      </button>
       <div className='data'>
         {productitems.map((val, key) => {
           console.log(val)
           return (
-            <div className="product" key={key}>
-              <img src={val.image} width="200px" height="200px" alt="Product Image" />
+            <div className="product-details" key={key}>
+              <img src={val.image} width="200px" height="200px" alt="Product" />
               <div className="product-details">
                 <h2 className="product-name">{val.name}</h2>
                 <p className="product-price"> ${val.price}</p>
@@ -77,9 +79,6 @@ const Data = () => {
           )
         })}
       </div>
-      <button className='addbutton' onClick={AddItem}>
-        Add Products
-      </button>
     <ul className="products"></ul>
       </>
   );
