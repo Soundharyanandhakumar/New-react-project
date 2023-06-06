@@ -15,10 +15,10 @@ const Createbundle = () => {
           image: Smartwatch
         },
         product2: {
-          id: "2",
-          name: "Airpods",
-          price: 2000,
-          image: Airpods
+          id: "1",
+          name: "Smartwatch",
+          price: 3000,
+          image: Smartwatch
         },
         discount: "10"
     })
